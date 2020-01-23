@@ -1,0 +1,1152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+      <script src="https://kit.fontawesome.com/436371529c.js"></script>
+    <title>Genesys Die Result Resource</title>
+  </head>
+  <body>
+    <nav class="navbar static-top navbar-expand-lg navbar-light bg-light">
+          
+        <a class="navbar-brand" href="#">Genesys Die Result Resource</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.twitter.com/the_chaithi" target="_blank" role="button">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/Chaithi/genesysDieResults" target="_blank" role="button">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://gmc.gamergadgets.net" target="_blank" role="button">
+                        Genesys Magic Calculator
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" role="button" data-toggle="modal" data-target="#sources">
+                        Edit Sources
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h3>Type of Check</h3>
+        <div class="btn-group flex-wrap" role="group" aria-label="Type of Check">
+          <button type="button" class="btn btn-secondary" onclick="showType(combat)">Combat</button>
+          <button type="button" class="btn btn-outline-dark" onclick="showType(social)">Social</button>
+          <button type="button" class="btn btn-secondary" onclick="showType(magic)">Magic</button>
+          <button type="button" class="btn btn-outline-dark" onclick="showType(hacking)">Hacking</button>
+          <button type="button" class="btn btn-secondary" onclick="showType(fear)">Fear/Sanity</button>
+          <button type="button" class="btn btn-outline-dark rot" onclick="showType(crafting)">Crafting</button>
+          <button type="button" class="btn btn-secondary rot" onclick="showType(alchemy)">Alchemy</button>
+          <button type="button" class="btn btn-outline-dark sr" onclick="showType(assensing)">Assensing</button>
+          <button type="button" class="btn btn-secondary sr" onclick="showType(enchanting)">Enchanting</button>
+          
+        </div>
+    </div>
+    <div class="container">
+        <h3>Result</h3>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-dark" onclick="showTable('good')">
+                <input type="radio" name="resultType" autocomplete="off">
+                <span class="ad"></span> / <span class="tr"></span>
+            </label>
+            <label class="btn btn-outline-dark" onclick="showTable('bad')">
+                <input type="radio" name="resultType" autocomplete="off">
+                <span class="t"></span> / <span class="de"></span>
+            </label>
+        </div>
+    </div>
+    <div class="container d-none" id="combat">
+        <h4>Combat</h4>
+        <h5><i>Source:</i> Genesys Core Rulebook</h5>
+        <table class="table table-striped good d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="ad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Recover 1 strain.</p>
+                  <p>Add <span class='b'></span> to the next allied character’s check.</p>
+                  <p>Notice a single important point in the ongoing conflict, such as the location of a door’s control panel or a weak point on an armored car.</p>
+                  <p>Inflict a Critical Injury with a successful attack that deals damage past soak (<span class="ad"></span> cost may vary).</p>
+                  <p>Activate an item quality (<span class="ad"></span> cost may vary).</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adad"></span> or <span class="tr"></span>
+              </th>
+                <td>
+                    <p>Perform an immediate free maneuver that does not exceed the limit of two maneuvers per turn.</p>
+                    <p>Add <span class='sb'></span> to the targeted character’s next check.</p>
+                    <p>Add <span class='b'></span> to any allied character’s next check, including that of the active character.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adadad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Negate the targeted enemy’s defense (such as the defense gained from cover, equipment, or performing the guarded stance maneuver) until the end of the current round.</p>
+                  <p>Ignore penalizing environmental effects such as inclement weather, zero gravity, or similar circumstances until the end of the active character’s next turn.</p>
+                  <p>When dealing damage to a target, have the attack disable the opponent or one piece of gear rather than dealing wounds or strain. This could include hobbling them temporarily with a shot to the leg, or disabling their radio.</p>
+                  <p>Gain +1 melee or ranged defense until the end of the active character’s next turn.</p>
+                  <p>Force the target to drop a melee or ranged weapon they are wielding.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Upgrade the difficulty of the targeted character’s next check.</p>
+                  <p>Upgrade the ability of any allied character’s next check, including that of the current active character.</p>
+                  <p>Do something vital, such as shooting the controls to the nearby blast doors to seal them shut.</p>
+                  <p>On an Initiative check, perform an immediate free maneuver before combat begins.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="tr"></span><span class="tr"></span>
+              </th>
+              <td>
+                  <p>When dealing damage to a target, have the attack destroy a piece of equipment the target is using, such as blowing up their assault rifle or slicing their sword in half.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-striped bad d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="t"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>The active character suffers 1 strain.</p>
+                  <p>The active character loses the benefits of a prior maneuver (such as from taking cover or assuming a guarded stance) until they perform the maneuver again.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tt"></span> or <span class="de"></span>
+              </th>
+                <td>
+                    <p>An opponent may immediately perform one free maneuver as an incidental in response to the active character’s check.</p>
+                    <p>Add <span class="b"></span> to the targeted character’s next check.</p>
+                    <p>The active character or an allied character suffers <span class="sb"></span> on their next action.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="ttt"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>The active character falls prone.</p>
+                  <p>The active character grants the enemy a significant advantage in the ongoing encounter, such as accidentally blasting the controls to a bridge the active character was planning to use for their escape.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="de"></span>
+              </th>
+              <td>
+                  <p>The character’s weapon immediately runs out of ammunition and may not be used for the remainder of the encounter.</p>
+                  <p>Upgrade the difficulty of an allied character’s next check or the next check of the current active character.</p>
+                  <p>The tool, Brawl, or Melee weapon the active character is using becomes damaged (see page 89).</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="container d-none" id="social">
+        <h4>Social</h4>
+        <h5><i>Source:</i> Genesys Core Rulebook</h5>
+        <table class="table table-striped good d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="ad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Recover 1 strain.</p>
+                  <p>Add <span class='b'></span> to the next allied character’s check.</p>
+                  <p>Notice a single important point in the ongoing encounter, such as an overly curious waiter or some drapes your character can stand behind to avoid being recognized.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adad"></span> or <span class="tr"></span>
+              </th>
+                <td>
+                    <p>Learn the Strength or Flaw of the targeted character.</p>
+                    <p>Add <span class='sb'></span> to the targeted character’s next check.</p>
+                    <p>Add <span class='b'></span> to any allied character’s next check, including that of the active character.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adadad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Learn the Desire or Fear of the targeted character.</p>
+                  <p>Successfully conceal your true goal in the encounter.</p>
+                  <p>Learn the true goal of your target, if your target has one.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Learn any one Motivation facet of any character in the encounter (with the GM’s approval).</p>
+                  <p>Upgrade the ability of any allied character’s next check, including that of the current active character.</p>
+                  <p>Upgrade the difficulty of the targeted character’s next check.</p>
+                  <p>Do something vital, such as getting everyone’s attention, or distracting all the guards so your character’s friends have a chance to do something important.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-striped bad d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="t"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>The active character suffers 1 strain.</p>
+                  <p>The active character gets distracted or sidetracked momentarily. This can result in their being unable to activate an ability that requires spending a maneuver on their next turn, or it may just result in their being dragged into a lengthy and boring conversation.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tt"></span> or <span class="de"></span>
+              </th>
+                <td>
+                    <p>The active character accidentally reveals their own Strength or Flaw.</p>
+                    <p>Add <span class="b"></span> to the targeted character’s next check.</p>
+                    <p>The active character or an allied character suffers <span class="sb"></span> on their next action.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="ttt"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>The active character accidentally reveals their own Desire or Fear.</p>
+                  <p>The active character accidentally reveals their true goal in the encounter.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="de"></span>
+              </th>
+              <td>
+                  <p>The active character accidentally reveals a Motivation facet of one of their allies.</p>
+                  <p>Learn one false Motivation facet of the target character (the active character believes it to be true).</p>
+                  <p>Upgrade the difficulty of an allied character’s next check or the next check of the current active character.</p>
+                  <p>The active character becomes so embroiled in irrelevant events in the encounter that they cannot do anything important during the next round.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="container d-none" id="magic">
+        <h4>Magic</h4>
+        <h5><i>Source:</i> Genesys Core Rulebook</h5>
+        <table class="table table-striped good d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="ad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Recover 1 strain. This cannot be applied to the 2 strain suffered from casting this spell.</p>
+                  <p>Add <span class='b'></span> to the next allied character’s check.</p>
+                  <p>Notice a single important point in the ongoing conflict, such as the location of a door’s control panel or a weak point on an armored car.</p>
+                  <p>Activate a spell effect (<span class="ad"></span> cost may vary).</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adad"></span> or <span class="tr"></span>
+              </th>
+                <td>
+                    <p>Perform an immediate free maneuver that does not exceed the limit of two maneuvers per turn.</p>
+                    <p>Add <span class='sb'></span> to the targeted character’s next check.</p>
+                    <p>Add <span class='b'></span> to any allied character’s next check, including that of the active character.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adadad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Negate the targeted enemy’s defense (such as the defense gained from cover, equipment, or performing the guarded stance maneuver) until the end of the current round.</p>
+                  <p>Ignore penalizing environmental effects such as inclement weather, zero gravity, or similar circumstances until the end of the active character’s next turn.</p>
+                  <p>When dealing damage to a target, have the attack disable the opponent or one piece of gear rather than dealing wounds or strain. This could include hobbling them temporarily with a ice shard to the leg, or disabling their radio with an electric shock.</p>
+                  <p>Gain +1 melee or ranged defense until the end of the active character’s next turn.</p>
+                  <p>Force the target to drop a melee or ranged weapon they are wielding.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Upgrade the difficulty of the targeted character’s next check.</p>
+                  <p>Upgrade the ability of any allied character’s next check, including that of the current active character.</p>
+                  <p>Do something vital, such as shooting the controls to the nearby blast doors to seal them shut.</p>
+                  <p>Inflict a Critical Injury with a successful Attack spell that deals damage past soak.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="tr"></span><span class="tr"></span>
+              </th>
+              <td>
+                  <p>When dealing damage to a target, have the attack destroy a piece of equipment the target is using, such as melting their assault rifle or shattering their sword with frozen air.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-striped bad d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="t"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>The magical energies exhaust the character, and they suffer 2 strain or 1 wound (controlling player's choice).</p>
+                  <p>This character and all allied spellcasters in the encounter add <span class="sb"></span> to any attempts to cast spells until the end of the controlling player's next turn.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tt"></span> or <span class="de"></span>
+              </th>
+                <td>
+                    <p>The spell doesn’t take effect until the start of the next round, or after a minute in narrative gameplay.</p>
+                    <p>If the character is using a magical item, it becomes damaged one step.</p>
+                    <p>Until the end of the encounter, enemy spellcasters add <span class="boost"></span> when casting a spell that targets this character.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="ttt"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>The spell is slightly more powerful than expected. One character of the GM's choice is targeted or otherwise affected by the spell as well.</p>
+                  <p>All other spellcasters and creatures attuned to magical energies within a day's travel become aware of the character (and depending on their disposition, may be very interested in finding them and doing them harm).</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="de"></span>
+              </th>
+              <td>
+                  <p>The character overexerts themself or loses their magical connection and is unable to cast spells for the rest of the encounter or scene.</p>
+                  <p>The GM picks the target of the character's spell. If the caster is an NPC, the controlling player picks the target of the spell instead.</p>
+                  <p>The tool, Brawl, or Melee weapon the active character is using becomes damaged (see page 89).</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="dede"></span>
+              </th>
+              <td>
+                  <p>The character completely lose control of their magical energies or draws the ire of their deity, suffering one Critical Injury (at the GM's discretion, this may instead take the form of some of terrible or hilarious misfortune, such as temporarily being turned into a small woodland creature, being struck by lightning on a clear day, swapping bodies with someone else in the encounter for the remainder of the day, or summoning an avatar of divine or infernal wrath).</p>
+                  <p>If the character is using a magical item, it is completely destroyed.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="container d-none" id="hacking">
+        <h4>Hacking</h4>
+        <h5><i>Source:</i> Genesys Core Rulebook, Shadow of the Beanstalk</h5>
+        <div class="container">
+            <h3>Who made the check?</h3>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-outline-dark" onclick="showTable('runner')">
+                    <input type="radio" name="runner" autocomplete="off">
+                    Runner
+                </label>
+                <label class="btn btn-outline-dark" onclick="showTable('sysops')">
+                    <input type="radio" name="runner" autocomplete="off">
+                    Sysops
+                </label>
+            </div>
+        </div>
+        <table class="table table-striped good d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="ad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p><b>Opportunity Identified</b>: The character finds a useful system exploit. Add <span class="b"></span> to the character’s next Computers check in this system.</p>
+                  <p class="runner"><b>Thorough Override</b>: If the runner successfully broke a piece of ice, it cannot be reactivated for one additional round.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adad"></span> or <span class="tr"></span>
+              </th>
+                <td>
+                    <p><b>Quick Commands</b>: The character may immediately perform an additional enact command maneuver as an incidental.</p>
+                    <p class="runner"><b>Cover Tracks</b>: The runner hides their presence, adding <span class="sb"></span> to the sysop’s next trace user action this encounter.</p>
+                    <p class="sysop"><b>Dynamic Code</b>: The sysop modifies the coding on a piece of ice, adding <span class="sb"></span> to all break ice checks targeting it.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adadad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p><b>Trolling</b>: The character takes a few moments to mock their opponent. Inflict 3 strain on one other user in the system.</p>
+                  <p class="runner"><b>Permanent Back Door</b>: The runner sets up a permanent means of accessing the system without needing to deal with its verification protocols. The difficulty of the access system action becomes <b>Easy (<span class="d"></span>)</b> as long as the runner can access the back door.</p>
+                  <p class="sysop"><b>Successful Trace</b>: The sysop successfully traces the runner once (in addition to the other results of the check).</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tr"></span>
+              </th>
+              <td>
+                  <p class="runner"><b>Hard Shutdown</b>: If the runner successfully broke a piece of ice, it is so thoroughly disabled that it cannot be reactivated for the remainder of the encounter.</p>
+                  <p class="runner"><b>Blurred Sig</b>: The runner obscures their online identity and masks the origins of their signal, canceling one successful trace against them.</p>
+                  <p class="runner"><b>Scouting Ahead</b>: The runner learns the type, strength, and rules of one un-encountered piece of ice on the system.</p>
+                  <p class="sysop"><b>Backup Ice</b>: The sysop activates their emergency defensive protocols. A system immediately gains an active Ice Wall barrier.</p>
+                  <p class="sysop"><b>Identified Exploit</b>: The sysop spots a back door in the system, removing one permanent back door of their choice.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-striped bad d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="t"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p><b>Disorganized System</b>: The user gets lost in a maze of poorly named sub-folders. Add <span class="sb"></span> to the character’s next Computerscheck in this system.</p>
+                  <p><b>Online Distractions</b>: The user gets too focused on the online world. Add <span class="sbsb"></span> to any non-Computers checks the user makes next turn.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tt"></span> or <span class="de"></span>
+              </th>
+                <td>
+                    <p class="runner"><b>Limited Access</b>: The runner may only perform one Network action or one Network maneuver during their next turn.</p>
+                    <p class="runner"><b>I Know You!</b>: A sysop on the system recognizes the runner’s style. The next time they successfully perform the trace user action, they successfully trace the runner one additional time.</p>
+                    <p class="sysop"><b>Careless Protocols</b>: Reduce the strength of one active piece of ice (runner’s choice) by 1, to a minimum of 1.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="ttt"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p class="runner"><b>Major Alert</b>: All users with access to the system become aware of the presence of an intruder on the network.</p>
+                  <p class="sysop"><b>Permanent Back Door</b>: As the sysop attempts to lock the system down, they leave a portion vulnerable. The runner gains a means of accessing the system without needing to deal with its verification protocols. The difficulty of the access system action becomes <b>Easy (<span class="d"></span>)</b> as long as the runner can access the back door.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="de"></span>
+              </th>
+              <td>
+                  <p class="runner"><b>Successful Trace</b>: Sloppy work allows one sysop on the system to successfully trace the runner once.</p>
+                  <p class="sysop"><b>Wrong Person</b>: As the sysop traces the runner, they get one crucial element of the runner’s identity completely wrong. This does not negate a successful trace, but it does mean that they may have the wrong name, apartment number, or exact location of the runner, which guarantees that the runner avoids any real-world retaliation and probably embarrasses the sysop in front of their superiors.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="container d-none" id="fear">
+        <h4>Fear/Sanity</h4>
+        <h5><i>Source:</i> Genesys Core Rulebook</h5>
+        <table class="table table-striped good d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="s"></span> but no <span class="ad"></span> or <span class="t"></span>
+              </th>
+              <td>
+                  <p><b>Steady Nerves:</b> The character keeps their nerve and suffers no ill effects.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="ad"></span> or <span class="tr"></span>
+              </th>
+                <td>
+                    <p><b>Stand with Me</b>: The character’s steadfast response emboldens their allies. Any allied characters forced to make a  fear check from the same source add <span class="b"></span> to their check.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tr"></span>
+              </th>
+              <td>
+                  <p><b>Fearless</b>: The character faces the source of fear and finds that it no longer has a hold on them. They automatically pass any further fear checks from that source. You should not apply these results if the source is the character’s Fear motivation (see page 48).</p>
+                  <p>Remove one mental trauma that has an associated severity level (see page 244) that is the same or less than the difficulty of the fear check.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-striped bad d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="f"></span> but no <span class="ad"></span> or <span class="t"></span>
+              </th>
+              <td>
+                  <p><b>Aversion</b>: The character is unnerved and distracted, and is disoriented for the rest of the encounter.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="t"></span> or <span class="de"></span>
+              </th>
+                <td>
+                    <p><b>Adrenaline Rush</b>: Momentary panic gives the character a rush of adrenalin, but at a cost. The character adds <span class="b"></span> to their next check, but suffers 3 strain.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tt"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p><b>Flee in Terror</b>: The character has to spend their next turn doing nothing but fleeing the source of the fear check (this includes downgrading their actions to maneuvers to move farther away).</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="ttt"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p><b>Frozen in Terror</b>: The character is immobilized and staggered during their next turn.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="ttt"></span><span class="tt"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>Character gains a mental trauma with the severity equal to the difficulty of the fear check. (See page 244).</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="container d-none" id="crafting">
+        <h4>Crafting</h4>
+        <h5><i>Source:</i> Realms of Terrinoth</h5>
+        <table class="table table-striped good d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="ad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Reduce the time to craft the item by one day, to a minimum of one. (You may select this option multiple times.)</p>
+                  <p>Your character adds <span class="b"></span> to their next check using the same skill.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adad"></span> or <span class="tr"></span>
+              </th>
+                <td>
+                    <p>Your character saves enough materials to reduce the cost of the next similar item they craft by half.</p>
+                    <p>Decrease the item’s encumbrance by one, to a minimum of 0.</p>
+                    <p>If the item has the Limited Ammo 1 quality or is otherwise limited to a single use, craft one additional identical item. (You may select this option multiple times.)</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adadad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Increase the item’s hard points by one.</p>
+                  <p>Reduce the difficulty of future checks to craft the item by one (to a minimum of Simple (–).</p>                  
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tr"></span>
+              </th>
+              <td>
+                  <p>The item gains the Superior quality</p>
+                  <p>Increase the value of one numerical benefit of the item by one or increase the rating of one quality the item possesses by one, excluding damage, critical rating, soak, and defense (e.g., the extra encumbrance capacity a backpack adds).</p>
+                  <p>Increase the narrative benefit of the item, or add a new narrative effect, as approved by your GM.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="tr"></span><span class="tr"></span>
+              </th>
+              <td>
+                  <p>The item gains one other item quality, subject to your GM’s approval. (You may only select this option once.)</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-striped bad d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="t"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>Increase the time to craft the item by one day. (You may select this option multiple times.)</p>
+                  <p>Add <span class="sb"></span> to the next crafting check the character makes.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tt"></span> or <span class="de"></span>
+              </th>
+                <td>
+                    <p>Increase the item’s encumbrance by one.</p>
+                    <p>Your character must purchase additional materials worth half of the original component cost.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="ttt"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>If the item is a weapon, it gains the Inaccurate 1 quality.</p>
+                  <p>Decrease the item’s hard points by one, to a minimum of 0.</p>
+                  <p>Your character’s tools are ruined in the process and must be replaced.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="de"></span>
+              </th>
+              <td>
+                  <p>The item gains the Inferior quality.</p>
+                  <p>Whenever the item is damaged, it is damaged one additional step.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="dede"></span>
+              </th>
+              <td>
+                  <p>There is a terrible accident, and your character suffers a Critical Injury or, at the GM's discretion, some related narrative event can occur of equal distress (your character's anvil explodes, the smithy catches on fire, poison gases spread into village, etc.).</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="container d-none" id="alchemy">
+        <h4>Alchemy</h4>
+        <h5><i>Source:</i> Realms of Terrinoth</h5>
+        <table class="table table-striped good d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="ad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>A character who uses the potion heals 1 strain or 1 wound (as determined by your character) in addition to its normal effects.</p>
+                  <p>Your character adds <span class="b"></span> to their next Alchemy check.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adad"></span> or <span class="tr"></span>
+              </th>
+                <td>
+                    <p>Your character prepares one additional dose of the potion. (You may select this option multiple times.)</p>
+                    <p>Reduce the time to prepare the potion by half.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adadad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Your character has enough ingredients left to craft another batch of the potion.</p>
+                  <p>Increase the duration of the potion’s effects by one round (if applicable).</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Upgrade the difficulty of checks to resist the poison’s effects once (poison only.)</p>
+                  <p>The potion is more effective than normal, as determined by your GM, when a character uses the potion.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="tr"></span><span class="tr"></span>
+              </th>
+              <td>
+                  <p>Choose one other potion of lower rarity and add its effects to this potion.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-striped bad d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="t"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>If the potion is beneficial, a character suffers 2 strain after using the potion and benefiting from its effects.</p>
+                  <p>The potion (or poison) has a strong smell that adds <span class="b"></span> to all checks made to detect its presence, including in food or drink.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tt"></span> or <span class="de"></span>
+              </th>
+                <td>
+                    <p>When used, the potion doesn’t take effect for one minute, or one round in structured time.</p>
+                    <p>Your character must purchase additional ingredients worth half of the original component cost.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="ttt"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>If the potion is beneficial, a character suffers 1 wound after using the potion and benefiting from its effects.</p>
+                  <p>Reduce the duration of the potion’s effects by one round, to a minimum of one round (if applicable). If the effects would last until the end of the encounter, they last for two rounds instead.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="de"></span>
+              </th>
+              <td>
+                  <p>A character who uses the potion is disoriented for two rounds.</p>
+                  <p>If the potion is beneficial, a character who uses the potion must succeed on an <b>Average (<span class="dd"></span>) Resilience check</b>; if they fail, their body rejects the potion and it doesn’t take effect.</p>
+                  <p>If the potion is harmful, a character who uses the potion must succeed on a <b>Hard (<span class="ddd"></span>) Resilience check</b>; if they succeed, their body rejects the potion and it doesn’t take effect. If there is already a check for the potion to take effect, reduce the difficulty by 1, instead.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="dede"></span>
+              </th>
+              <td>
+                  <p>If the potion is beneficial, the user also suffers the effects of poison (see page 102) after resolving the normal effects of the potion.</p>
+                  <p>If the potion is harmful, the user also suffers the effects of a Regeneration Elixir (see page 103) after resolving the normal effects of the potion.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    
+    <div class="container d-none" id="enchanting">
+        <h4>Enchanting</h4>
+        <h5><i>Source:</i> Shadowrun (Homebrew)</h5>
+        <table class="table table-striped good d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="ad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Reduce the time to craft the item by one day, to a minimum of one. (You may select this option multiple times.)</p>
+                  <p>Your character adds <span class="b"></span> to their next check using the same skill.</p>
+                  <p>Add <span class="sb"></span> to any check to determine the item's true purpose.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adad"></span> or <span class="tr"></span>
+              </th>
+                <td>
+                    <p>Your character saves enough materials to reduce the cost of the next similar item they craft by half.</p>
+                    <p>When the user uses the Charm, they regain 1 Strain.</p>
+                    <p>Once per encounter, when using the Focus, you may suffer 1 fewer Strain when casting a spell.</p>
+                    <p>You find a shortcut and create an additional Charm from the same materials. (You may select this option multiple times.)</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adadad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>If this Focus grants additional damage using Attack spells, increase that value by 1.</p>
+                  <p>You thoroughly document the process and create a blueprint. You are able to reduce the difficulty when making this particular focus or charm in the future by 1 (to a minimum of <b>Simple(~)</b>).</p>                  
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tr"></span>
+              </th>
+              <td>
+                  <p>If the focus says the GM determines an effect, you, as the crafter, can choose instead.</p>
+                  <p>The item gains the Superior quality</p>
+                  <p>Increase the value of one numerical benefit of the item by one or increase the rating of one quality the item possesses by one, excluding damage, critical rating, soak, and defense.</p>
+                  <p>Increase the narrative benefit of the item, or add a new narrative effect, as approved by your GM.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="tr"></span><span class="tr"></span>
+              </th>
+              <td>
+                  <p>The item gains one other item quality, subject to your GM’s approval. (You may only select this option once.)</p>
+                  <p>If the focus includes decreasing the difficulty of a check, decrease by an additional difficulty, down to a minimum of <b>Simple (-).</b></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-striped bad d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="t"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>Increase the time to craft the item by one day. (You may select this option multiple times.)</p>
+                  <p>Add <span class="sb"></span> to the next Enchanting check the character makes.</p>
+                  <p>It is more obvious this focus or charm is magical. Add <span class="b"></span> to checks to determine its’ true purpose.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tt"></span> or <span class="de"></span>
+              </th>
+                <td>
+                    <p>Increase the item’s encumbrance by one.</p>
+                    <p>Your character must purchase additional materials worth half of the original component cost.</p>
+                    <p>User suffers 2 Strain when using the charm.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="ttt"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>As part of activating the Charm, the user must succeed at an <b>Average(<span class="dd"></span>) Discipline check</b>, or the Charm fails to activate.</p>
+                  <p>User suffers an additional Strain when casting a spell through this Focus.</p>
+                  <p>If this Focus grants additional damage using Attack spells, decrease that value by 1.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="de"></span>
+              </th>
+              <td>
+                  <p>The item gains the Inferior quality.</p>
+                  <p>Whenever the item is damaged, it is damaged one additional step.</p>
+                  <p>Using this Focus or Charm for the first time causes the user to suffer 8 strain.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="dede"></span>
+              </th>
+              <td>
+                  <p>There is a terrible accident, and your character suffers a Critical Injury or, at the GM's discretion, some related narrative event can occur of equal distress.</p>
+                  <p>User must spend a Story Point to activate the charm or gain benefit of the Focus.</p>
+                  <p>Item seems cursed. When the user wants to use the Talisman or Focus, the GM may spend 2 Story Points to cause it to fail to work.</p>
+                  <p>If you used a Blueprint during this check, it is proven useless and it resets back to the base difficulty.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="container d-none" id="assensing">
+        <h4>Assensing</h4>
+        <h5><i>Source:</i> Shadowrun (Homebrew)</h5>
+        <table class="table table-striped good d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="s"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>State of subject’s health.</p>
+                  <p>Current emotional state.</p>
+                  <p>Mundane or Awakened.</p>
+                  <p>Presence and location of Cyberware.</p>
+                  <p>Spell type of active magic.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="ss"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>General diagnosis of health issue.</p>
+                  <p>Location of bioware.</p>
+                  <p>Amount of Essence left.</p>
+                  <p>Technomancer or not.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="ss"></span><span class="s"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Accurate diagnosis of malady or disease.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="ad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Recover 1 strain.</p>
+                  <p>Learn astral signature of a spell/spirit/Awakened aura.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adad"></span> or <span class="tr"></span>
+              </th>
+                <td>
+                    <p>Analyze the signature. If you've learned the signature before, you recognize it.</p>
+                    <p>Gain <span class="b"></span> when tracking the signature for the next 24 hours.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="adadad"></span> or <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Upgrade your checks once when tracking or Assensing for next 24 hours.</p>
+                  <p>Gain a permanent <span class="b"></span> when tracking or recognizing this signature.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tr"></span>
+              </th>
+              <td>
+                  <p>Permanently upgrade all checks related to tracking or recognizing this signature.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-striped bad d-none">
+          <thead>
+            <tr>
+              <th scope="col-3">Cost</th>
+              <th scope="col-9">Result Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <span class="t"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>The active character suffers 1 strain.</p>
+                  <p>The active character gains a <span class="sb"></span> on their next Assensing check.</p>
+             </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="tt"></span> or <span class="de"></span>
+              </th>
+                <td>
+                    <p>If the aura you are assensing is active on the Astral plane, they notice your interest.</p>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="ttt"></span> or <span class="de"></span>
+              </th>
+              <td>
+                  <p>Downgrade your next Astral action.</p>
+                  <p>An astral entity determines your own signature.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <span class="de"></span>
+              </th>
+              <td>
+                  <p>Gain a permanent <span class="sb"></span> when tracking or recognizing this signature.</p>
+                  <p>Downgrade all checks related to tracking or recognizing this signature for the next 24 hours.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="sources" tabindex="-1" role="dialog" aria-labelledby="sources" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sources</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="gcrb" checked disabled>
+              <label class="form-check-label" for="gcrb">
+                Genesys Core Rulebook
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="rot" checked>
+              <label class="form-check-label" for="rot">
+                Realms of Terrinoth
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="sotb" checked disabled>
+              <label class="form-check-label" for="rot">
+                Shadow of the Beanstalk
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="sr" checked>
+              <label class="form-check-label" for="sr">
+                Shadowrun (Homebrew)
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary close" data-dismiss="modal" onclick="setSources()">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+</script>
+  </body>
+</html>
